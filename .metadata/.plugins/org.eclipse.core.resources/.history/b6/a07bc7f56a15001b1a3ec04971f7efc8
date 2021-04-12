@@ -1,0 +1,75 @@
+import java.util.*;
+public class Monedas {
+
+
+	public static void main(String[] args) {
+		Scanner leer = new Scanner(System.in);
+		//VALORES Y DECLARACION
+		double cantidad, resultadoEuro, resultadoYen, resultadoDolar, resultadoWon;
+		int respuesta, respuestaSeguir;
+		double valorDolares =0.84;
+		double valorYen = 0.0081;
+		double valorWon = 0.000730963;
+		
+		do {
+		//PEDIMOS LA CANTIDAD DE EUROS QUE EL USUARIO DESEA CONVERTIR
+		System.out.println("***BIENVENIDO A NUESTRO CONVERSOR DE MONEDAS***");
+		System.out.println("Que cantidad de Euros desea convertir:");
+		cantidad =leer.nextDouble();
+		
+		//MENU DE LAS CONVERSIONES
+		System.out.println("1.-Convertir EUROS a DOLARES.");
+		System.out.println("2.-Convertir EUROS a YENES.");
+		System.out.println("3.-Convertir Euros a Wones.");
+		System.out.println("4.-Seguir Convirtiendo.");
+		System.out.println("5.-Salir.");
+		respuesta=leer.nextInt();
+		
+		switch(respuesta) {
+		case 1:
+			resultadoEuro = cantidad * valorDolares;
+			System.out.println("El valor de la cantidad introducida en Dolares es:"+resultadoEuro);
+			break;
+		
+		case 2:
+			resultadoYen = cantidad * valorYen;
+			System.out.println("El valor de la cantidad introducida en Dolares es:"+resultadoYen);
+			break;
+			
+		case 3:
+			resultadoWon = cantidad * valorWon;
+			System.out.println("El valor de la cantidad introducida en Dolares es:"+resultadoWon);
+			break;
+			
+		case 4:
+			System.out.println("Seguir convirtiendo.");
+			System.out.println("1.-Convertir EUROS a DOLARES.");
+			System.out.println("2.-Convertir EUROS a YENES.");
+			System.out.println("3.-Convertir Euros a Wones.");
+			respuestaSeguir = leer.nextInt();
+				
+				switch(respuestaSeguir) {
+				case 1:
+					resultadoEuro = cantidad * valorDolares;
+					System.out.println("El valor de la cantidad introducida en Dolares es:"+resultadoEuro);
+					break;
+				case 2:
+					resultadoYen = cantidad * valorYen;
+					System.out.println("El valor de la cantidad introducida en Dolares es:"+resultadoYen);
+					break;
+				case 3:
+					resultadoWon = cantidad * valorWon;
+					System.out.println("El valor de la cantidad introducida en Dolares es:"+resultadoWon);
+					break;
+				}
+			
+			break;
+		}
+		
+		}while(respuesta !=5);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,37 @@
+import java.util.*;
+public class Media {
+
+	
+
+	public static void main(String[] args) {
+		Scanner t = new Scanner(System.in);
+		int numero, elementos = 0, suma = 0;
+		float media;
+		
+		
+		System.out.println("Introduzca el primer numero:");
+		numero=t.nextInt();
+		
+		while(numero>=0) {
+			suma += numero; //ES UNA SUMA ITERATIVA
+			elementos++; //AUMENTAMOS CONTINUAMENTE 
+			
+			System.out.println("Introduzca el primer numero:");
+			numero=t.nextInt();
+		}
+		
+		if( elementos == 0) { 
+			
+			System.out.println("EROOR, La division entre o no existe.");
+			
+		}else {
+			
+			media = (float) suma/elementos;
+			System.out.println("La media es:" +media);
+			
+		}
+
+
+	}
+
+}
